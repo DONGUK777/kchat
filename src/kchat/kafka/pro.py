@@ -1,6 +1,6 @@
 from kafka import KafkaProducer
 import time
-import json
+from json import dumps
 from tqdm import tqdm
 
 pro = KafkaProducer(
