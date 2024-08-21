@@ -14,7 +14,7 @@ for i in tqdm(range(10)):
     data = {'str': 'value' + str(i)}
     pro.send('topic1', value=data)
     pro.flush()
-    time.sleep(1)
+    time.sleep(0.1)
 
 end = time.time()
 print("[DONE]:", end - start)
