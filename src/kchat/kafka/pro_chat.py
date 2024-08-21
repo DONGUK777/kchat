@@ -1,5 +1,5 @@
 from kafka import KafkaProducer
-from json import dumps
+import json
 import time
 
 pro = KafkaProducer(
@@ -16,7 +16,8 @@ while True:
         break
 
     data = {'message': msg, 'time': time.time()}
-    #pro.send()
+    pro.send('chat', value=data)
+    pro.flush()
 
 
 print("채팅 종료")
