@@ -1,0 +1,27 @@
+[project]
+name = "kchat"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "DONGUK777", email = "kimdongyork@gmail.com"},
+]
+dependencies = []
+requires-python = "==3.8.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.3.2",
+    "pytest-cov>=5.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+[project.scripts]
+kchat-ping = "kchat.cli:ping"
